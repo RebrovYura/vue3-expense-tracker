@@ -1,15 +1,8 @@
 <template>
-    <div>
-
-    </div>
+    <h2>Expense Tracker</h2>
 </template>
-
 <script>
-    export default {
-        
-    }
+export default {
+    name: 'Header'
+}
 </script>
-
-<style scoped>
-
-</style>

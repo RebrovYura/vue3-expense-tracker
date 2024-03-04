@@ -1,15 +1,12 @@
 <template>
-    <div>
-
-    </div>
+    <h4>Your Balance</h4>
+    <div id="balance">$0.00</div>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+    name: 'Balance'
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

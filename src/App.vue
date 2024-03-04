@@ -1,15 +1,16 @@
 <template>
-  <div>
-    MyApp
+  <Header />
+  <div class="container">
+    <Balance />
+    <IncomeExpenses />
+    <TransactionList />
+    <TransactionForm />
   </div>
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {
+}
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
