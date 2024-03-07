@@ -20,7 +20,7 @@ import { useToast } from 'vue-toastification';
 const text = ref('')
 const amount = ref('')
 const toast = useToast()
-const emit = defineEmits(["transactionEmits"])
+const emit = defineEmits(["transactionSubmitted"])
 
 const onSubmit = () => {
     if (!text.value || !amount.value) {
@@ -33,7 +33,7 @@ const onSubmit = () => {
         amount: parseFloat(amount.value)
     }
 
-    emit("transactionEmits", transactionData)
+    emit("transactionSubmitted", transactionData)
     
     text.value = ''
     amount.value = ''

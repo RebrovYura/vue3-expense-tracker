@@ -3,15 +3,8 @@
     <ul id="list" class="list">
         <li v-for="item in transactions" v-bind:key="item.id" v-bind:class="item.amount < 0 ? 'minus' : 'plus'">
             {{ item.text }} <span>{{ item.amount }}$</span>
+            <button @click="deleteTransaction(item.id)" class="delete-btn">x</button>
         </li>
-        <!-- <li class="minus">
-            Cash <span>-$400</span>
-            <button class="delete-btn">x</button>
-        </li>
-        <li class="plus">
-            Paycheck <span>$400</span>
-            <button class="delete-btn">x</button>
-        </li> -->
     </ul>
 </template>
 
@@ -25,9 +18,12 @@ const props = defineProps({
     }
 })
 
-</script>
+const emit = defineEmits(["transactionDeleted"])
 
-// Define component name
+const deleteTransaction = (id) => {
+    emit("transactionDeleted", id)
+} 
+</script>
 
 <script>
 export default {

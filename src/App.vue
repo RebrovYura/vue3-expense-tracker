@@ -3,8 +3,8 @@
   <div class="container">
     <Balance :total="+total"/>
     <IncomeExpenses :income="+income" :expense="+expense" />
-    <TransactionList :transactions="transactions" />
-    <TransactionForm @transactionEmits="handleTransactionSubmit"/>
+    <TransactionList :transactions="transactions" @transactionDeleted="handleTransactionDelete"/>
+    <TransactionForm @transactionSubmitted="handleTransactionSubmit"/>
   </div>
 </template>
 
@@ -52,6 +52,11 @@ const handleTransactionSubmit = (transactionData) => {
   })
 
   toast.success('Операция успешно добавлена!✨')
+}
+
+const handleTransactionDelete = (id) => {
+  transactions.value = transactions.value.filter((transaction) => transaction.id !== id)
+  toast.success('Операция была успешно удалена!✏️')
 }
 </script>
 
