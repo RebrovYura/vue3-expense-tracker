@@ -5,6 +5,7 @@ import App from "./App.vue";
 
 import Toast from "vue-toastification";
 import "vue-toastification/dist/index.css";
+import "../node_modules/flowbite-vue/dist/index.css";
 import "./style.css";
 
 // const pinia = createPinia()

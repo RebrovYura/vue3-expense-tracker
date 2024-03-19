@@ -1,5 +1,5 @@
 <template>
-    <div class="px-5 py-7 rounded-3xl text-white bg-[#171717] shadow-2xl">
+    <div class="px-5 py-7 rounded-3xl text-white bg-[#171717] shadow-block-shadow">
         <p class="text-xl">Мой бюджет</p>
         <div class="flex justify-between items-center">
             <div>
@@ -12,8 +12,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
 const props = defineProps({
     total: {
         type: Number,

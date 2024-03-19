@@ -1,12 +1,12 @@
 <template>
-    <div class="inc-exp-container">
-        <div>
-            <h4>Доходы</h4>
-            <p id="money-plus" class="money plus">{{ income }} ₽</p>
+    <div class="flex justify-around p-5 mt-4 rounded-3xl text-center">
+        <div class="">
+            <h4 class="text-xl font-semibold">Доходы</h4>
+            <p class="text-lg text-[#2ecc71]">{{ income }} ₽</p>
         </div>
         <div>
-            <h4>Расходы</h4>
-            <p id="money-minus" class="money minus">{{ expense }} ₽</p>
+            <h4 class="text-xl font-semibold">Расходы</h4>
+            <p class="text-lg text-[#c0392b]">{{ expense }} ₽</p>
         </div>
     </div>
 </template>

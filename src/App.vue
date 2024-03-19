@@ -1,6 +1,6 @@
 <template>
   <Header />
-  <div class="container">
+  <div class="max-w-[420px] my-8 mx-auto">
     <Balance :total="+total" />
     <div class="block">
       <IncomeExpenses :income="+income" :expense="+expense" />

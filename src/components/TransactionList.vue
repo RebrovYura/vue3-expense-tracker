@@ -1,16 +1,16 @@
 <template>
-    <h3>История</h3>
-    <ul id="list" class="list">
+    <h3 class="text-xl font-semibold">История</h3>
+    <ul class="list list-none p-0 mb-10">
         <li v-for="item in transactions" v-bind:key="item.id" v-bind:class="item.amount < 0 ? 'minus' : 'plus'">
             {{ item.text }} <span>{{ item.amount }}$</span>
-            <button @click="deleteTransaction(item.id)" class="delete-btn">x</button>
+            <button @click="deleteTransaction(item.id)" class="delete-btn">
+                x
+            </button>
         </li>
     </ul>
 </template>
 
 <script setup>
-import { defineProps } from 'vue';
-
 const props = defineProps({
     transactions: {
         type: Array,
@@ -30,5 +30,3 @@ export default {
     name: 'TransactionList'
 }
 </script>
-
-<style scoped></style>
