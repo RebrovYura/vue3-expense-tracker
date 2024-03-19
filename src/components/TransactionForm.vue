@@ -1,15 +1,15 @@
 <template>
-    <h3>Add new transaction</h3>
+    <h3>Добавить новую операцию</h3>
     <form id="form" @submit.prevent="onSubmit">
         <div class="form-control">
-            <label for="text">Text</label>
-            <input type="text" id="text" v-model="text" placeholder="Enter text...">
+            <label for="text">Название</label>
+            <input type="text" id="text" v-model="text" placeholder="Название операции...">
         </div>
         <div class="form-control">
-            <label for="amount">Amount <br /> (negative - expense, positive - income)</label>
-            <input type="text" id="amount" v-model="amount" placeholder="Enter amount...">
+            <label for="amount">Сумма <br /> (отрицательная - расходы, положительная - доходы)</label>
+            <input type="text" id="amount" v-model="amount" placeholder="Сумма...">
         </div>
-        <button class="btn">Add transaction</button>
+        <button class="btn">Добавить</button>
     </form>
 </template>
 
@@ -27,14 +27,14 @@ const onSubmit = () => {
         toast.error('Поля не должны быть пустыми!😕 ')
         return
     }
-    
+
     const transactionData = {
         text: text.value,
         amount: parseFloat(amount.value)
     }
 
     emit("transactionSubmitted", transactionData)
-    
+
     text.value = ''
     amount.value = ''
 }

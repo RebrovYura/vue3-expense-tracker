@@ -1,18 +1,19 @@
-import { createApp } from 'vue'
-import components from './components/index.js'
-import App from './App.vue'
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import components from "./components/index.js";
+import App from "./App.vue";
 
-import Toast from 'vue-toastification'
-import 'vue-toastification/dist/index.css'
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
+import "./style.css";
 
-import './assets/style.css'
+// const pinia = createPinia()
+const app = createApp(App);
+app.use(Toast);
+// app.use(pinia)
 
+components.forEach((component) => {
+  app.component(component.name, component);
+});
 
-const app = createApp(App)
-app.use(Toast)
-
-components.forEach(component => {
-    app.component(component.name, component)
-})
-
-app.mount('#app')
+app.mount("#app");

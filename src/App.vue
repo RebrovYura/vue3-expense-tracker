@@ -2,9 +2,11 @@
   <Header />
   <div class="container">
     <Balance :total="+total" />
-    <IncomeExpenses :income="+income" :expense="+expense" />
-    <TransactionList :transactions="transactions" @transactionDeleted="handleTransactionDelete" />
-    <TransactionForm @transactionSubmitted="handleTransactionSubmit" />
+    <div class="block">
+      <IncomeExpenses :income="+income" :expense="+expense" />
+      <TransactionList :transactions="transactions" @transactionDeleted="handleTransactionDelete" />
+      <TransactionForm @transactionSubmitted="handleTransactionSubmit" />
+    </div>
   </div>
 </template>
 
